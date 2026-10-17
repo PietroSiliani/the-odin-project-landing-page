@@ -1,11 +1,16 @@
-/* * {
+* {
     font-family: "Roboto", sans-serif;
-    border: solid red 1px;
-} */
+    /* border: solid red 1px; */
+}
 
 body>* {
-    padding-left: 20em;
-    padding-right: 20em;
+    padding-left: 25em;
+    padding-right: 25em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .header,
@@ -15,14 +20,23 @@ body>* {
     color: #F9FAF8
 }
 
+.hero,
+.information,
+.quote {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header-logo {
     font-size: 24px;
     font-weight: 900;
+    flex: initial;
 }
 
 .header-links {
@@ -30,8 +44,10 @@ body>* {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
+    justify-content: end;
     align-items: center;
-    gap: 20px
+    gap: 20px;
+    flex: initial;
 }
 
 .header-links a {
@@ -75,16 +91,76 @@ body>* {
 
 .hero-text * {
     margin: 5px;
+    flex: 1 1 auto;
 }
 
 button {
     color: #F9FAF8;
     font-weight: 900;
     background-color: #3882F6;
-    padding: 5px 40px;
+    padding: 8px 40px;
     border-radius: 10px;
 }
 
 .landing-image {
-    padding-right: 0;
+    min-width: 0;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.information-heading {
+    text-align: center;
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+}
+
+.information-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.information-image {
+    text-align: center;
+    margin: 0;
+    min-width: 0;
+}
+
+.information-image>figcaption {
+    font-weight: 400;
+    color: gray;
+    width: 0;
+    min-width: 100%;
+}
+
+.information-image>img {
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: solid 4px #3882F6;
+    margin-bottom: 0;
+}
+
+.quote {
+    background-color: #E5E7EB;
+}
+
+.quote-text {
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.quote-credit {
+    text-align: end;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 0;
 }
